@@ -92,8 +92,8 @@
   </tile>
   <tile id="2">
    <properties>
-    <property name="Class" value="Fly"/>
-    <property name="sprite" value="fly"/>
+    <property name="Class" value="grey_slime"/>
+    <property name="sprite" value="grey_slime"/>
    </properties>
   </tile>
  </tileset>
@@ -24214,8 +24214,9 @@
   <object gid="696" x="140" y="551"/>
   <object gid="696" x="697" y="518"/>
   <object gid="199" x="1453" y="843"/>
-  <object gid="198" x="474" y="837"/>
+  <object gid="198" x="470" y="842"/>
   <object gid="199" x="1326" y="843"/>
   <object gid="199" x="1038" y="843"/>
+  <object gid="200" x="2584" y="841"/>
  </objectgroup>
 </map>

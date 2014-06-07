@@ -2575,8 +2575,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="692"/>
-   <tile gid="692"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="155"/>
    <tile gid="155"/>
    <tile gid="155"/>
@@ -20596,8 +20596,8 @@
    <tile gid="692"/>
    <tile gid="692"/>
    <tile gid="692"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="692"/>
+   <tile gid="692"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>

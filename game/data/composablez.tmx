@@ -2402,7 +2402,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="155"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -24213,10 +24213,10 @@
   <object gid="539" x="1606" y="587"/>
   <object gid="696" x="140" y="551"/>
   <object gid="696" x="699" y="521"/>
-  <object gid="199" x="1453" y="843"/>
+  <object gid="199" x="1469" y="842"/>
   <object gid="198" x="470" y="842"/>
-  <object gid="199" x="1326" y="843"/>
-  <object gid="199" x="1038" y="843"/>
+  <object gid="199" x="1400" y="843"/>
+  <object gid="199" x="888" y="843"/>
   <object gid="200" x="2584" y="841"/>
   <object gid="696" x="2458" y="476"/>
   <object gid="696" x="2855" y="482"/>

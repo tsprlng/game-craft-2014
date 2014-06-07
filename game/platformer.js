@@ -437,23 +437,40 @@ var makeLevel = function(filename){
 
     // LAYER EXISTENCE MAGIC:
     //
+    var greenSlimeRestores = [];
     stage.colorLayers = {};
+
     stage.setColorVisible = function(layerName, shouldShow){
       var l = stage.colorLayers[layerName];
       l.p.opacity = shouldShow ? 1 : 0;
       l.p.type = shouldShow ? Q.SPRITE_DEFAULT : Q.SPRITE_INVISIBLE;
+      if (shouldShow && layerName==='green') {
+        _.forEach(greenSlimeRestores, function(r){r();});
+      }
     }
     stage.isColorVisible = function(layerName){
       return stage.colorLayers[layerName].opacity > 0.1;
     }
 
+
     _.forEach(stage.items, function(i, idx){
       var sheetName = (i.p || {}).sheet;
-      if (! sheetName || ! _.contains(COLOR_LAYERS, sheetName)){
+      if (sheetName && _.contains(COLOR_LAYERS, sheetName)){
+        stage.colorLayers[sheetName] = i;
+      } else if (sheetName && sheetName === 'slime'){  // green slimez
+        var orig = i.update;
+        i.p.opacity = 0;
+        i.update = function(dt){console.log('haa')};
+        (function(i){
+          greenSlimeRestores.push(function(){
+            i.p.opacity = 1;
+            i.update = orig;
+          });
+        })(i);
+        console.warn('disabled slime', i);
+      } else {
         console.log("leaving alone sheet:", sheetName, i);
-        return;
       }
-      stage.colorLayers[sheetName] = i;
     });
 
     // start them all hidden:

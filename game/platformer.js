@@ -28,7 +28,7 @@ var Q = window.Q =
 // Load and init audio files.
 
 // the names of colour tile layers to start invisible / control under stage
-var COLOR_LAYERS = ['green', 'blue'];
+var COLOR_LAYERS = ['green', 'purple', 'red'];
 
 
 Q.SPRITE_PLAYER = 1;

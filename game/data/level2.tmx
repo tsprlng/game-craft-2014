@@ -6048,7 +6048,6 @@
   </data>
  </layer>
  <objectgroup name="Sprites" width="60" height="20">
-  <object name="Player" gid="637" x="203" y="909"/>
   <object name="coin" gid="633" x="280" y="747"/>
   <object name="coin" gid="633" x="344" y="747"/>
   <object name="coin" gid="633" x="315" y="693"/>
@@ -6077,5 +6076,6 @@
   <object name="grey slime" gid="655" x="1528" y="559"/>
   <object name="blue slime" gid="657" x="2517" y="490"/>
   <object name="boss slime" gid="655" x="3501" y="980"/>
+  <object name="Player" gid="637" x="211" y="912"/>
  </objectgroup>
 </map>

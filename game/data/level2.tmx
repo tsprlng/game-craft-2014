@@ -17,15 +17,66 @@
  </tileset>
  <tileset firstgid="633" name="coin" tilewidth="72" tileheight="97" spacing="2">
   <image source="../images/coin.png" width="72" height="97"/>
+   <tile id="0">
+     <properties>
+       <property name="Class" value="Collectable"/>
+       <property name="amount" value="10"/>
+       <property name="sprite" value="coin_green"/>
+     </properties>
+   </tile>
  </tileset>
  <tileset firstgid="634" name="paintcans" tilewidth="72" tileheight="97">
   <image source="../images/paintcans.png" width="216" height="97"/>
+   <tile id="0">
+     <properties>
+       <property name="Class" value="PaintCan"/>
+       <property name="Color" value="purple"/>
+       <property name="sprite" value="paintcan_purple"/>
+     </properties>
+   </tile>
+   <tile id="1">
+     <properties>
+       <property name="Class" value="PaintCan"/>
+       <property name="Color" value="green"/>
+       <property name="sprite" value="paintcan_green"/>
+     </properties>
+   </tile>
+   <tile id="2">
+     <properties>
+       <property name="Class" value="PaintCan"/>
+       <property name="Color" value="red"/>
+       <property name="sprite" value="paintcan_red"/>
+     </properties>
+   </tile>
  </tileset>
  <tileset firstgid="637" name="player" tilewidth="72" tileheight="97">
   <image source="../images/player_template.png" width="1296" height="98"/>
+   <tile id="0">
+     <properties>
+       <property name="Class" value="Player"/>
+     </properties>
+   </tile>
  </tileset>
  <tileset firstgid="655" name="enemies" tilewidth="70" tileheight="70" spacing="2">
   <image source="../images/enemies.png" width="216" height="216"/>
+   <tile id="0">
+     <properties>
+       <property name="Class" value="Snail"/>
+       <property name="sprite" value="snail"/>
+     </properties>
+   </tile>
+   <tile id="1">
+     <properties>
+       <property name="Class" value="Slime"/>
+       <property name="sprite" value="slime"/>
+     </properties>
+   </tile>
+   <tile id="2">
+     <properties>
+       <property name="Class" value="grey_slime"/>
+       <property name="sprite" value="grey_slime"/>
+     </properties>
+   </tile>
  </tileset>
  <layer name="background" width="60" height="20">
   <data>
@@ -1232,6 +1283,9 @@
   </data>
  </layer>
  <layer name="Grey" width="60" height="20">
+   <properties>
+     <property name="collision" value="true"/>
+   </properties>
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2436,6 +2490,9 @@
   </data>
  </layer>
  <layer name="Purple" width="60" height="20">
+   <properties>
+     <property name="collision" value="true"/>
+   </properties>
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -3640,6 +3697,9 @@
   </data>
  </layer>
  <layer name="Red" width="60" height="20">
+   <properties>
+     <property name="collision" value="true"/>
+   </properties>
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -4844,6 +4904,9 @@
   </data>
  </layer>
  <layer name="Green" width="60" height="20">
+   <properties>
+     <property name="collision" value="true"/>
+   </properties>
   <data>
    <tile gid="0"/>
    <tile gid="0"/>

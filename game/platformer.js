@@ -354,7 +354,7 @@ Q.Sprite.extend("Collectable", {
       Q.stageScene('hud', 3, colObj.p);
       if (colObj.p.score >= 150) {
         Q.clearStages();
-        Q.stageScene('level2');
+        Q.stageScene('introduction2');
       }
     }
     Q.audio.play('coin.mp3');
@@ -531,8 +531,29 @@ Q.scene('introduction',function(stage) {
     Q.clearStages();
     Q.stageScene('level1');
   });
-  button2.on("click",function() {
-    Q.audio.stop('pigeon.mp3');
+
+  // Expand the container to visibily fit it's contents
+  container.fit(20);
+});
+Q.scene('introduction2',function(stage) {
+  var container = stage.insert(new Q.UI.Container({
+    x: Q.width/2, y: Q.height/2, fill: "rgba(255,255,255,1)"
+  }));
+
+  var button = container.insert(new Q.UI.Button({
+    x: 0, y: 0, fill: "#CCCCCC",
+    label: "La deuxième étage!"
+  }));
+  var label = container.insert(new Q.UI.Text({
+    x:10, y: -10 - button.p.h,
+    label: 'Oooh-la-la monsieur! Fantastique! Allons-y!'
+  }));
+  var man = container.insert(new Q.UI.HTMLElement({
+    x:10, y: -30 - button.p.h, w: 200, h: 200,
+    html: '<img style="z-index:9001; position:absolute; right: 8px; bottom: 8px" src="./images/man-in-beret.png">'
+  }));
+  
+  button.on("click",function() {
     Q.clearStages();
     Q.stageScene('level2');
   });

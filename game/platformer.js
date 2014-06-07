@@ -352,6 +352,10 @@ Q.Sprite.extend("Collectable", {
     if (this.p.amount) {
       colObj.p.score += this.p.amount;
       Q.stageScene('hud', 3, colObj.p);
+      if (colObj.p.score >= 150) {
+        Q.clearStages();
+        Q.stageScene('level2');
+      }
     }
     Q.audio.play('coin.mp3');
     this.destroy();

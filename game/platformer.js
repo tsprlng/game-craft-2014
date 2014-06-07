@@ -497,7 +497,7 @@ Q.scene('introduction',function(stage) {
   }));
   var label = container.insert(new Q.UI.Text({
     x:10, y: -10 - button.p.h,
-    label: 'O NOOO! Someone has stolen ze reality paint D:'
+    label: 'O NOOO! Someone has stolen ze reality paint! I must collect one hundred and fifty of ze american dollars to buy moar!'
   }));
   var man = container.insert(new Q.UI.HTMLElement({
     x:10, y: -30 - button.p.h, w: 200, h: 200,

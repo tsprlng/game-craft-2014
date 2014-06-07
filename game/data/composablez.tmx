@@ -24152,19 +24152,19 @@
   <object gid="207" x="328" y="827"/>
   <object gid="538" x="958" y="842">
    <properties>
-    <property name="Class" value="paintcan"/>
+    <property name="Class" value="Collectable"/>
     <property name="Color" value="green"/>
    </properties>
   </object>
   <object gid="537" x="64" y="697">
    <properties>
-    <property name="Class" value="paintcan"/>
+    <property name="Class" value="Collectable"/>
     <property name="Color" value="purple"/>
    </properties>
   </object>
   <object gid="539" x="1603" y="693">
    <properties>
-    <property name="Class" value="paintcan"/>
+    <property name="Class" value="Collectable"/>
     <property name="Color" value="red"/>
    </properties>
   </object>

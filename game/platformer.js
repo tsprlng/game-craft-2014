@@ -457,17 +457,14 @@ Q.scene('hud',function(stage) {
     x: 50, y: 0
   }));
 
-  var label = container.insert(new Q.UI.Text({
-    x:200, y: 20,
-    label: "Score: " + stage.options.score,
-    color: "white" }));
-
   var strength = container.insert(new Q.UI.Text({
     x:50, y: 20,
-    label: "Health: " + stage.options.strength + '%',
-    color: "white" }));
+    label: 'Health: ' + stage.options.strength + '%   Score: ' + stage.options.score,
+    color: "#609",
+    family: 'Zapfino, "Curlz MT"' }));
 
-  container.fit(20);
+  container.fit(12);
+  container.p.x = container.p.w/2 + 6;
 });
 
 Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {

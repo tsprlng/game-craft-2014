@@ -19,10 +19,6 @@ module.exports = function (grunt) {
         options: {
           // livereload: true
         }
-      },
-      gruntfile: {
-        files: ['Gruntfile.js'],
-        tasks: ['generateenv']
       }
       // livereload: {
       //   options: {

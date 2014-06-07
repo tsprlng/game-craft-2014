@@ -24172,7 +24172,7 @@
  <objectgroup name="Sprites" width="200" height="30">
   <object gid="207" x="328" y="827"/>
   <object gid="538" x="958" y="842"/>
-  <object gid="537" x="73" y="585"/>
+  <object gid="537" x="64" y="697"/>
   <object gid="539" x="1606" y="587"/>
  </objectgroup>
 </map>

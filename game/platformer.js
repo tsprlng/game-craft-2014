@@ -487,6 +487,10 @@ Q.scene('introduction',function(stage) {
     x: 0, y: 0, fill: "#CCCCCC",
     label: "O NOOO!"
   }));
+  var button2 = container.insert(new Q.UI.Button({
+    x: 0, y: 29, fill: "#CCCCCC",
+    label: "level 2!"
+  }));
   var label = container.insert(new Q.UI.Text({
     x:10, y: -10 - button.p.h,
     label: 'O NOOO! Someone has stolen ze reality paint D:'
@@ -501,6 +505,10 @@ Q.scene('introduction',function(stage) {
   button.on("click",function() {
     Q.clearStages();
     Q.stageScene('level1');
+  });
+  button2.on("click",function() {
+    Q.clearStages();
+    Q.stageScene('level2');
   });
 
   // Expand the container to visibily fit it's contents

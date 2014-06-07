@@ -14,7 +14,7 @@ window.addEventListener("load",function() {
 // includes the `TileLayer` class as well as the `2d` componet.
 var Q = window.Q =
   Quintus({
-    audioSupported: [ 'wav','mp3','ogg' ],
+    audioSupported: [ 'mp3','ogg' ],
     development: true
   })
     .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio")
@@ -461,6 +461,7 @@ var makeLevel = function(filename){
       stage.setColorVisible(name, false);
     });
     
+    Q.audio.play('lovely.mp3',{ loop: true });
     Q.stageScene('hud', 3, Q('Player').first().p);
   }
 }
@@ -519,7 +520,7 @@ Q.scene('introduction',function(stage) {
   container.fit(20);
 });
 
-Q.loadTMX("composablez.tmx, level2.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
+Q.loadTMX("composablez.tmx, level2.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png, lovely.mp3", function() {
     Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
     Q.compileSheets("paintcans.png", "paintcans.json");

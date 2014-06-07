@@ -24,17 +24,8 @@
  <tileset firstgid="637" name="player" tilewidth="72" tileheight="97">
   <image source="../images/player_template.png" width="1296" height="98"/>
  </tileset>
- <tileset firstgid="655" name="slime_Green" tilewidth="60" tileheight="40">
-  <image source="../images/slime_Green.png" width="180" height="40"/>
- </tileset>
- <tileset firstgid="658" name="red_slime" tilewidth="60" tileheight="40">
-  <image source="../images/Slimez.png" width="180" height="40"/>
- </tileset>
- <tileset firstgid="661" name="Slime_blue" tilewidth="60" tileheight="40">
-  <image source="../images/Slime_blue.png" width="180" height="40"/>
- </tileset>
- <tileset firstgid="664" name="slime_Grey" tilewidth="60" tileheight="40">
-  <image source="../images/slime_Grey.png" width="180" height="40"/>
+ <tileset firstgid="655" name="enemies" tilewidth="70" tileheight="70" spacing="2">
+  <image source="../images/enemies.png" width="216" height="216"/>
  </tileset>
  <layer name="background" width="60" height="20">
   <data>
@@ -6080,10 +6071,11 @@
   <object name="coin" gid="633" x="1265" y="477"/>
   <object name="coin" gid="633" x="1333" y="435"/>
   <object name="coin" gid="633" x="1400" y="493"/>
-  <object name="blue slime" gid="661" x="1404" y="839"/>
-  <object name="boss slime" gid="658" x="3440" y="978"/>
-  <object name="green slime" gid="655" x="492" y="912"/>
-  <object name="grey slime" gid="664" x="1194" y="978"/>
-  <object name="red slime" gid="658" x="1414" y="563"/>
+  <object name="green slime" gid="656" x="562" y="911"/>
+  <object name="grey slime" gid="655" x="1193" y="980"/>
+  <object name="blue slime" gid="657" x="1477" y="840"/>
+  <object name="grey slime" gid="655" x="1528" y="559"/>
+  <object name="blue slime" gid="657" x="2517" y="490"/>
+  <object name="boss slime" gid="655" x="3501" y="980"/>
  </objectgroup>
 </map>

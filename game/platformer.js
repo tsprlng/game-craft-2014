@@ -45,8 +45,8 @@ Q.Sprite.extend("Player",{
       sheet: "player",  // Setting a sprite sheet sets sprite width and height
       sprite: "player",
       direction: "right",
-      standingPoints: [ [ -16, 44], [ -23, 35 ], [-23,-48], [23,-48], [23, 35 ], [ 16, 44 ]],
-      duckingPoints : [ [ -16, 44], [ -23, 35 ], [-23,-10], [23,-10], [23, 35 ], [ 16, 44 ]],
+      standingPoints: [ [ -12, 31 ], [ -6, -31 ], [ 6, -31 ], [ 12, 31 ] ],
+      duckingPoints : [ [ -12, 31 ], [ -14, -21 ], [ 14, -21 ], [ 12, 31 ] ],
       jumpSpeed: -400,
       speed: 300,
       strength: 100,

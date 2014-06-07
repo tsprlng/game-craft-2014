@@ -2378,7 +2378,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="112"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2458,7 +2458,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="112"/>
-   <tile gid="112"/>
+   <tile gid="161"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -4361,7 +4361,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="191"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -7326,7 +7326,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="503"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -7404,9 +7404,9 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="503"/>
    <tile gid="0"/>
-   <tile gid="545"/>
-   <tile gid="521"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -7485,7 +7485,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="503"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -8115,7 +8115,7 @@
  </layer>
  <objectgroup name="Sprites" width="80" height="20">
   <object name="coin" gid="633" x="980" y="747"/>
-  <object name="coin" gid="633" x="1044" y="747"/>
+  <object name="coin" gid="633" x="1072" y="711"/>
   <object name="coin" gid="633" x="1015" y="693"/>
   <object name="coin" gid="633" x="1400" y="919"/>
   <object name="coin" gid="633" x="1456" y="886"/>

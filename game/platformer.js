@@ -27,11 +27,16 @@ var Q = window.Q =
 
 // Load and init audio files.
 
+// the names of colour tile layers to start invisible / control under stage
+var COLOR_LAYERS = ['green', 'blue'];
+
 
 Q.SPRITE_PLAYER = 1;
 Q.SPRITE_COLLECTABLE = 2;
 Q.SPRITE_ENEMY = 4;
 Q.SPRITE_DOOR = 8;
+Q.SPRITE_INVISIBLE = 32;  // for hidden colour layers
+
 Q.Sprite.extend("Player",{
 
   init: function(p) {
@@ -391,6 +396,29 @@ Q.scene("level1",function(stage) {
   Q.stageTMX("composablez.tmx",stage);
 
   stage.add("viewport").follow(Q("Player").first());
+
+  // LAYER EXISTENCE MAGIC:
+  //
+  stage.colorLayers = {};
+  stage.setColorVisible = function(layerName, shouldShow){
+    var l = stage.colorLayers[layerName];
+    l.p.opacity = shouldShow ? 1 : 0;
+    l.p.type = shouldShow ? Q.SPRITE_DEFAULT : Q.SPRITE_INVISIBLE;
+  }
+  stage.isColorVisible = function(layerName){
+    return stage.colorLayers[layerName].opacity > 0.1;
+  }
+
+  _.forEach(stage.items, function(i, idx){
+    var sheetName = (i.p || {}).sheet;
+    if (! sheetName || ! _.contains(COLOR_LAYERS, sheetName)){ return; }
+    stage.colorLayers[sheetName] = i;
+  });
+
+  // start them all hidden:
+  _.forEach(stage.colorLayers, function(l, name){
+    stage.setColorVisible(name, false);
+  });
 });
 
 Q.scene('hud',function(stage) {

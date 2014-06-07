@@ -108,8 +108,8 @@
   <tileset firstgid="225" name="green" tilewidth="70" tileheight="70" spacing="2">
     <image source="../images/green.png" trans="ffffff" width="914" height="936"/>
   </tileset>
-  <tileset firstgid="381" name="blue" tilewidth="70" tileheight="70" spacing="2">
-    <image source="../images/blue.png" trans="ffffff" width="914" height="936"/>
+  <tileset firstgid="381" name="purple" tilewidth="70" tileheight="70" spacing="2">
+    <image source="../images/purple.png" trans="ffffff" width="914" height="936"/>
   </tileset>
   <tileset firstgid="537" name="paintcans" tilewidth="72" tileheight="97">
     <image source="../images/paintcans.png" width="216" height="97"/>

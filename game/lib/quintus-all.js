@@ -6682,7 +6682,7 @@ Quintus.UI = function(Q) {
     },
 
     step: function(dt) {
-      this._super(dt);
+      // this._super(dt);
       this.position();
     },
 

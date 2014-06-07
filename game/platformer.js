@@ -450,6 +450,8 @@ Q.scene("level1",function(stage) {
   _.forEach(stage.colorLayers, function(l, name){
     stage.setColorVisible(name, false);
   });
+  
+  Q.stageScene('hud', 3, Q('Player').first().p);
 });
 
 Q.scene('hud',function(stage) {
@@ -467,7 +469,40 @@ Q.scene('hud',function(stage) {
   container.p.x = container.p.w/2 + 6;
 });
 
+<<<<<<< HEAD
 Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
+=======
+Q.scene('introduction',function(stage) {
+  var container = stage.insert(new Q.UI.Container({
+    x: Q.width/2, y: Q.height/2, fill: "rgba(255,255,255,1)"
+  }));
+
+  var button = container.insert(new Q.UI.Button({
+    x: 0, y: 0, fill: "#CCCCCC",
+    label: "O NOOO!"
+  }));
+  var label = container.insert(new Q.UI.Text({
+    x:10, y: -10 - button.p.h,
+    label: 'O NOOO! Someone has stolen my reality paint D:'
+  }));
+  var man = container.insert(new Q.UI.HTMLElement({
+    x:10, y: -30 - button.p.h, w: 200, h: 200,
+    html: '<img style="z-index:9001; position:absolute; right: 8px; bottom: 8px" src="./images/displeasedman-in-beret.png">'
+  }));
+
+  // When the button is clicked, clear all the stages
+  // and restart the game.
+  button.on("click",function() {
+    Q.clearStages();
+    Q.stageScene('level1');
+  });
+
+  // Expand the container to visibily fit it's contents
+  container.fit(20);
+});
+
+Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
+>>>>>>> 7132f0447c63ef80c87cf16641d2b59bbf426466
     Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
     Q.compileSheets("paintcans.png", "paintcans.json");
@@ -495,9 +530,7 @@ Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemi
     Q.animations("fly", EnemyAnimations);
     Q.animations("slime", EnemyAnimations);
     Q.animations("snail", EnemyAnimations);
-    Q.stageScene("level1");
-    Q.stageScene('hud', 3, Q('Player').first().p);
-  
+    Q.stageScene("introduction");  
 }, {
   progressCallback: function(loaded,total) {
     var element = document.getElementById("loading_progress");

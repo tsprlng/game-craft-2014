@@ -457,11 +457,15 @@ Q.scene('hud',function(stage) {
     x: 50, y: 0
   }));
 
-  var label = container.insert(new Q.UI.Text({x:200, y: 20,
-    label: "Score: " + stage.options.score, color: "white" }));
+  var label = container.insert(new Q.UI.Text({
+    x:200, y: 20,
+    label: "Score: " + stage.options.score,
+    color: "white" }));
 
-  var strength = container.insert(new Q.UI.Text({x:50, y: 20,
-    label: "Health: " + stage.options.strength + '%', color: "white" }));
+  var strength = container.insert(new Q.UI.Text({
+    x:50, y: 20,
+    label: "Health: " + stage.options.strength + '%',
+    color: "white" }));
 
   container.fit(20);
 });

@@ -364,7 +364,8 @@ Q.Sprite.extend("Door", {
     this.on("sensor");
   },
   findLinkedDoor: function() {
-    return this.stage.find(this.p.link);
+    var linkId = this.p.link;
+    return _.find(this.stage.items, function(i){return i.p.id === linkId;});
   },
   // When the player is in the door.
   sensor: function(colObj) {

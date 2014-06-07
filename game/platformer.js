@@ -30,7 +30,6 @@ var Q = window.Q =
 // the names of colour tile layers to start invisible / control under stage
 var COLOR_LAYERS = ['green', 'purple', 'red'];
 
-
 Q.SPRITE_PLAYER = 1;
 Q.SPRITE_COLLECTABLE = 2;
 Q.SPRITE_ENEMY = 4;
@@ -92,13 +91,6 @@ Q.Sprite.extend("Player",{
     this.p.checkDoor = true;
   },
 
-  resetLevel: function() {
-    Q.stageScene("level1");
-    this.p.strength = 100;
-    this.animate({opacity: 1});
-    Q.stageScene('hud', 3, this.p);
-  },
-
   enemyHit: function(data) {
     var col = data.col;
     var enemy = data.enemy;
@@ -119,7 +111,7 @@ Q.Sprite.extend("Player",{
     this.p.strength -= 25;
     Q.stageScene('hud', 3, this.p);
     if (this.p.strength == 0) {
-      this.resetLevel();
+      this.stage.resetLevel();
     }
   },
 
@@ -240,7 +232,7 @@ Q.Sprite.extend("Player",{
     }
 
     if(this.p.y > 2000) {
-      this.resetLevel();
+      this.stage.resetLevel();
     }
   }
 });
@@ -429,7 +421,7 @@ Q.Collectable.extend("Heart", {
   }
 });
 
-var makeLevel = function(filename){
+var makeLevel = function(filename, levelName){
   return function(stage) {
     Q.stageTMX(filename, stage);
 
@@ -450,6 +442,11 @@ var makeLevel = function(filename){
     }
     stage.isColorVisible = function(layerName){
       return stage.colorLayers[layerName].opacity > 0.1;
+    }
+
+    stage.resetLevel = function(){
+      Q.clearStages();
+      Q.stageScene(levelName);
     }
 
 
@@ -482,8 +479,8 @@ var makeLevel = function(filename){
     Q.stageScene('hud', 3, Q('Player').first().p);
   }
 }
-Q.scene("level1", makeLevel("composablez.tmx"));
-Q.scene("level2", makeLevel("level2.tmx"));
+Q.scene("level1", makeLevel("composablez.tmx", 'level1'));
+Q.scene("level2", makeLevel("level2.tmx", 'level2'));
 
 Q.scene('hud',function(stage) {
   var container = stage.insert(new Q.UI.Container({

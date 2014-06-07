@@ -388,7 +388,7 @@ Q.Collectable.extend("Heart", {
 });
 
 Q.scene("level1",function(stage) {
-  Q.stageTMX("level1.tmx",stage);
+  Q.stageTMX("composablez.tmx",stage);
 
   stage.add("viewport").follow(Q("Player").first());
 });
@@ -407,8 +407,8 @@ Q.scene('hud',function(stage) {
   container.fit(20);
 });
 
-Q.loadTMX("level1.tmx, collectables.json, doors.json, enemies.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player.png", function() {
-    Q.compileSheets("player.png","player.json");
+Q.loadTMX("composablez.tmx, collectables.json, doors.json, enemies.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
+    Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
     Q.compileSheets("enemies.png","enemies.json");
     Q.compileSheets("doors.png","doors.json");

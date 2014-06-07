@@ -13617,14 +13617,14 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="535"/>
+   <tile gid="535"/>
+   <tile gid="535"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="535"/>
+   <tile gid="535"/>
+   <tile gid="535"/>
+   <tile gid="535"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -24218,7 +24218,7 @@
   <object gid="199" x="1400" y="843"/>
   <object gid="199" x="1087" y="843"/>
   <object gid="200" x="2584" y="841"/>
-  <object gid="696" x="2458" y="476"/>
+  <object gid="696" x="1444" y="486"/>
   <object gid="696" x="2855" y="482"/>
   <object gid="696" x="1136" y="773"/>
   <object gid="696" x="1221" y="770"/>
@@ -24229,7 +24229,7 @@
   <object gid="696" x="227" y="555"/>
   <object gid="696" x="297" y="627"/>
   <object gid="696" x="2761" y="482"/>
-  <object gid="696" x="2367" y="476"/>
-  <object gid="696" x="2288" y="476"/>
+  <object gid="696" x="1610" y="394"/>
+  <object gid="696" x="1815" y="488"/>
  </objectgroup>
 </map>

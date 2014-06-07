@@ -531,6 +531,13 @@ Q.scene('introduction',function(stage) {
     Q.clearStages();
     Q.stageScene('level1');
   });
+  // When the button is clicked, clear all the stages
+  // and restart the game.
+  button2.on("click",function() {
+    Q.audio.stop('pigeon.mp3');
+    Q.clearStages();
+    Q.stageScene('level2');
+  });
 
   // Expand the container to visibily fit it's contents
   container.fit(20);

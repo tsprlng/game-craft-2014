@@ -504,14 +504,18 @@ Q.scene('introduction',function(stage) {
     x:10, y: -30 - button.p.h, w: 200, h: 200,
     html: '<img style="z-index:9001; position:absolute; right: 8px; bottom: 8px" src="./images/displeasedman-in-beret.png">'
   }));
+  
+  Q.audio.play('pigeon.mp3',{ loop: true });
 
   // When the button is clicked, clear all the stages
   // and restart the game.
   button.on("click",function() {
+    Q.audio.stop('pigeon.mp3');
     Q.clearStages();
     Q.stageScene('level1');
   });
   button2.on("click",function() {
+    Q.audio.stop('pigeon.mp3');
     Q.clearStages();
     Q.stageScene('level2');
   });
@@ -520,7 +524,7 @@ Q.scene('introduction',function(stage) {
   container.fit(20);
 });
 
-Q.loadTMX("composablez.tmx, level2.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png, lovely.mp3", function() {
+Q.loadTMX("composablez.tmx, level2.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png, lovely.mp3, pigeon.mp3", function() {
     Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
     Q.compileSheets("paintcans.png", "paintcans.json");

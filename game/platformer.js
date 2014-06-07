@@ -302,15 +302,20 @@ Q.Sprite.extend("Enemy", {
   }
 });
 
-Q.Enemy.extend("Fly", {
-
+Q.Enemy.extend("grey_slime", {
+    init: function (p) {
+        this._super(p, {
+            w: 60,
+            h: 35
+        });
+    }
 });
 
 Q.Enemy.extend("Slime", {
   init: function(p) {
     this._super(p,{
       w: 60,
-      h: 40
+      h: 35
     });
   }
 });
@@ -318,8 +323,8 @@ Q.Enemy.extend("Slime", {
 Q.Enemy.extend("Snail", {
   init: function(p) {
     this._super(p,{
-      w: 55,
-      h: 36
+      w: 60,
+      h: 35
     });
   }
 
@@ -523,7 +528,7 @@ Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemi
       walk: { frames: [0,1], rate: 1/3, loop: true },
       dead: { frames: [2], rate: 1/10 }
     };
-    Q.animations("fly", EnemyAnimations);
+    Q.animations("grey_slime", EnemyAnimations);
     Q.animations("slime", EnemyAnimations);
     Q.animations("snail", EnemyAnimations);
     Q.stageScene("introduction");  

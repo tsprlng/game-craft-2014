@@ -475,8 +475,8 @@ Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemi
     Q.animations("player", {
       walk_right: { frames: [0,1,2,3,4,5,6,7,8,9,10], rate: 1/15, flip: false, loop: true },
       walk_left: { frames:  [0,1,2,3,4,5,6,7,8,9,10], rate: 1/15, flip:"x", loop: true },
-      jump_right: { frames: [13], rate: 1/10, flip: false },
-      jump_left: { frames:  [13], rate: 1/10, flip: "x" },
+      jump_right: { frames: [12], rate: 1/10, flip: false },
+      jump_left: { frames:  [12], rate: 1/10, flip: "x" },
       stand_right: { frames:[14], rate: 1/10, flip: false },
       stand_left: { frames: [14], rate: 1/10, flip:"x" },
       duck_right: { frames: [15], rate: 1/10, flip: false },

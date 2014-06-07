@@ -445,7 +445,7 @@ var makeLevel = function(filename, levelName, music){
     }
 
     stage.resetLevel = function(){
-      Q.audio.stop(music+'.mp3');      
+      Q.audio.stop();
       Q.clearStages();
       Q.stageScene(levelName);
     }
@@ -521,7 +521,7 @@ Q.scene('introduction',function(stage) {
   // When the button is clicked, clear all the stages
   // and restart the game.
   button.on("click",function() {
-    Q.audio.stop('pigeon.mp3');
+    Q.audio.stop();
     Q.clearStages();
     Q.stageScene('level1');
   });
@@ -548,6 +548,7 @@ Q.scene('introduction2',function(stage) {
   }));
   
   button.on("click",function() {
+    Q.audio.stop();
     Q.clearStages();
     Q.stageScene('level2');
   });
@@ -584,7 +585,7 @@ Q.loadTMX("composablez.tmx, level2.tmx, collectables.json, paintcans.json, doors
     Q.animations("grey_slime", EnemyAnimations);
     Q.animations("slime", EnemyAnimations);
     Q.animations("snail", EnemyAnimations);
-    Q.stageScene("introduction");  
+    Q.stageScene("introduction2");
 }, {
   progressCallback: function(loaded,total) {
     var element = document.getElementById("loading_progress");

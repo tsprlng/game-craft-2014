@@ -440,7 +440,10 @@ Q.scene("level1",function(stage) {
 
   _.forEach(stage.items, function(i, idx){
     var sheetName = (i.p || {}).sheet;
-    if (! sheetName || ! _.contains(COLOR_LAYERS, sheetName)){ return; }
+    if (! sheetName || ! _.contains(COLOR_LAYERS, sheetName)){
+      console.log("leaving alone sheet:", sheetName, i);
+      return;
+    }
     stage.colorLayers[sheetName] = i;
   });
 
@@ -464,9 +467,10 @@ Q.scene('hud',function(stage) {
   container.fit(20);
 });
 
-Q.loadTMX("composablez.tmx, collectables.json, doors.json, enemies.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
+Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
     Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
+    Q.compileSheets("paintcans.png","paintcans.json");
     Q.compileSheets("enemies.png","enemies.json");
     Q.compileSheets("doors.png","doors.json");
     Q.animations("player", {

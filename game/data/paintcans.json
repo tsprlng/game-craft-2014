@@ -1,0 +1,5 @@
+{
+  "paintcan_purple":{"sx":0,"sy":0,"cols":1,"spacingX":0,"spacingY":0,"tilew":72,"tileh":97,"frames":1},
+  "paintcan_red":{"sx":72,"sy":0,"cols":1,"spacingX":0,"spacingY":0,"tilew":72,"tileh":97,"frames":1},
+  "paintcan_green":{"sx":144,"sy":0,"cols":1,"spacingX":0,"spacingY":0,"tilew":72,"tileh":97,"frames":1}
+}

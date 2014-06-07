@@ -117,18 +117,21 @@
       <properties>
         <property name="Class" value="PaintCan"/>
         <property name="Color" value="purple"/>
+        <property name="sprite" value="paintcan_purple"/>
       </properties>
     </tile>
     <tile id="1">
       <properties>
         <property name="Class" value="PaintCan"/>
         <property name="Color" value="green"/>
+        <property name="sprite" value="paintcan_green"/>
       </properties>
     </tile>
     <tile id="2">
       <properties>
         <property name="Class" value="PaintCan"/>
         <property name="Color" value="red"/>
+        <property name="sprite" value="paintcan_red"/>
       </properties>
     </tile>
   </tileset>

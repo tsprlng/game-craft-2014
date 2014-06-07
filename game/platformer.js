@@ -485,7 +485,7 @@ Q.scene('introduction',function(stage) {
   }));
   var label = container.insert(new Q.UI.Text({
     x:10, y: -10 - button.p.h,
-    label: 'O NOOO! Someone has stolen my reality paint D:'
+    label: 'O NOOO! Someone has stolen ze reality paint D:'
   }));
   var man = container.insert(new Q.UI.HTMLElement({
     x:10, y: -30 - button.p.h, w: 200, h: 200,

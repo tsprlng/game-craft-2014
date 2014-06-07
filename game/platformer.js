@@ -460,7 +460,7 @@ var makeLevel = function(filename){
       } else if (sheetName && sheetName === 'slime'){  // green slimez
         var orig = i.update;
         i.p.opacity = 0;
-        i.update = function(dt){console.log('haa')};
+        i.update = function(dt){};
         (function(i){
           greenSlimeRestores.push(function(){
             i.p.opacity = 1;

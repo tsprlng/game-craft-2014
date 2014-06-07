@@ -425,39 +425,43 @@ Q.Collectable.extend("Heart", {
   }
 });
 
-Q.scene("level1",function(stage) {
-  Q.stageTMX("composablez.tmx",stage);
+var makeLevel = function(filename){
+  return function(stage) {
+    Q.stageTMX(filename, stage);
 
-  stage.add("viewport").follow(Q("Player").first());
+    stage.add("viewport").follow(Q("Player").first());
 
-  // LAYER EXISTENCE MAGIC:
-  //
-  stage.colorLayers = {};
-  stage.setColorVisible = function(layerName, shouldShow){
-    var l = stage.colorLayers[layerName];
-    l.p.opacity = shouldShow ? 1 : 0;
-    l.p.type = shouldShow ? Q.SPRITE_DEFAULT : Q.SPRITE_INVISIBLE;
-  }
-  stage.isColorVisible = function(layerName){
-    return stage.colorLayers[layerName].opacity > 0.1;
-  }
-
-  _.forEach(stage.items, function(i, idx){
-    var sheetName = (i.p || {}).sheet;
-    if (! sheetName || ! _.contains(COLOR_LAYERS, sheetName)){
-      console.log("leaving alone sheet:", sheetName, i);
-      return;
+    // LAYER EXISTENCE MAGIC:
+    //
+    stage.colorLayers = {};
+    stage.setColorVisible = function(layerName, shouldShow){
+      var l = stage.colorLayers[layerName];
+      l.p.opacity = shouldShow ? 1 : 0;
+      l.p.type = shouldShow ? Q.SPRITE_DEFAULT : Q.SPRITE_INVISIBLE;
     }
-    stage.colorLayers[sheetName] = i;
-  });
+    stage.isColorVisible = function(layerName){
+      return stage.colorLayers[layerName].opacity > 0.1;
+    }
 
-  // start them all hidden:
-  _.forEach(stage.colorLayers, function(l, name){
-    stage.setColorVisible(name, false);
-  });
-  
-  Q.stageScene('hud', 3, Q('Player').first().p);
-});
+    _.forEach(stage.items, function(i, idx){
+      var sheetName = (i.p || {}).sheet;
+      if (! sheetName || ! _.contains(COLOR_LAYERS, sheetName)){
+        console.log("leaving alone sheet:", sheetName, i);
+        return;
+      }
+      stage.colorLayers[sheetName] = i;
+    });
+
+    // start them all hidden:
+    _.forEach(stage.colorLayers, function(l, name){
+      stage.setColorVisible(name, false);
+    });
+    
+    Q.stageScene('hud', 3, Q('Player').first().p);
+  }
+}
+Q.scene("level1", makeLevel("composablez.tmx"));
+Q.scene("level2", makeLevel("level2.tmx"));
 
 Q.scene('hud',function(stage) {
   var container = stage.insert(new Q.UI.Container({
@@ -503,7 +507,7 @@ Q.scene('introduction',function(stage) {
   container.fit(20);
 });
 
-Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
+Q.loadTMX("composablez.tmx, level2.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
     Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
     Q.compileSheets("paintcans.png", "paintcans.json");

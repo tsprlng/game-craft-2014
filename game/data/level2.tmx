@@ -24,6 +24,18 @@
  <tileset firstgid="637" name="player" tilewidth="72" tileheight="97">
   <image source="../images/player_template.png" width="1296" height="98"/>
  </tileset>
+ <tileset firstgid="655" name="slime_Green" tilewidth="60" tileheight="40">
+  <image source="../images/slime_Green.png" width="180" height="40"/>
+ </tileset>
+ <tileset firstgid="658" name="red_slime" tilewidth="60" tileheight="40">
+  <image source="../images/Slimez.png" width="180" height="40"/>
+ </tileset>
+ <tileset firstgid="661" name="Slime_blue" tilewidth="60" tileheight="40">
+  <image source="../images/Slime_blue.png" width="180" height="40"/>
+ </tileset>
+ <tileset firstgid="664" name="slime_Grey" tilewidth="60" tileheight="40">
+  <image source="../images/slime_Grey.png" width="180" height="40"/>
+ </tileset>
  <layer name="background" width="60" height="20">
   <data>
    <tile gid="2"/>
@@ -6045,28 +6057,33 @@
   </data>
  </layer>
  <objectgroup name="Sprites" width="60" height="20">
-  <object gid="637" x="203" y="909"/>
-  <object gid="633" x="280" y="747"/>
-  <object gid="633" x="344" y="747"/>
-  <object gid="633" x="315" y="693"/>
-  <object gid="633" x="700" y="919"/>
-  <object gid="633" x="756" y="886"/>
-  <object gid="633" x="809" y="919"/>
-  <object gid="633" x="849" y="981"/>
-  <object gid="634" x="1339" y="990"/>
-  <object gid="635" x="1120" y="501"/>
-  <object gid="636" x="2245" y="469"/>
-  <object gid="633" x="1819" y="503"/>
-  <object gid="633" x="1956" y="505"/>
-  <object gid="633" x="2027" y="638"/>
-  <object gid="633" x="2099" y="639"/>
-  <object gid="633" x="1617" y="790"/>
-  <object gid="633" x="1695" y="793"/>
-  <object gid="633" x="1757" y="825"/>
-  <object gid="633" x="1788" y="894"/>
-  <object gid="633" x="1795" y="985"/>
-  <object gid="633" x="1265" y="477"/>
-  <object gid="633" x="1333" y="435"/>
-  <object gid="633" x="1400" y="493"/>
+  <object name="Player" gid="637" x="203" y="909"/>
+  <object name="coin" gid="633" x="280" y="747"/>
+  <object name="coin" gid="633" x="344" y="747"/>
+  <object name="coin" gid="633" x="315" y="693"/>
+  <object name="coin" gid="633" x="700" y="919"/>
+  <object name="coin" gid="633" x="756" y="886"/>
+  <object name="coin" gid="633" x="809" y="919"/>
+  <object name="coin" gid="633" x="849" y="981"/>
+  <object name="blue paint" gid="634" x="1339" y="990"/>
+  <object name="green paint" gid="635" x="1120" y="501"/>
+  <object name="red paint" gid="636" x="2245" y="469"/>
+  <object name="coin" gid="633" x="1819" y="503"/>
+  <object name="coin" gid="633" x="1956" y="505"/>
+  <object name="coin" gid="633" x="2027" y="638"/>
+  <object name="coin" gid="633" x="2099" y="639"/>
+  <object name="coin" gid="633" x="1617" y="790"/>
+  <object name="coin" gid="633" x="1695" y="793"/>
+  <object name="coin" gid="633" x="1757" y="825"/>
+  <object name="coin" gid="633" x="1788" y="894"/>
+  <object name="coin" gid="633" x="1795" y="985"/>
+  <object name="coin" gid="633" x="1265" y="477"/>
+  <object name="coin" gid="633" x="1333" y="435"/>
+  <object name="coin" gid="633" x="1400" y="493"/>
+  <object name="blue slime" gid="661" x="1404" y="839"/>
+  <object name="boss slime" gid="658" x="3440" y="978"/>
+  <object name="green slime" gid="655" x="492" y="912"/>
+  <object name="grey slime" gid="664" x="1194" y="978"/>
+  <object name="red slime" gid="658" x="1414" y="563"/>
  </objectgroup>
 </map>

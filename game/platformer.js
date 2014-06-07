@@ -372,9 +372,8 @@ Q.Sprite.extend("PaintCan", {
   // When a Collectable is hit.
   sensor: function(colObj) {
     // Increment the score.
-    if (this.p.amount) {
-      colObj.p.score += this.p.amount;
-      Q.stageScene('hud', 3, colObj.p);
+    if (this.p.Color) {
+      this.stage.setColorVisible(this.p.Color, true);
     }
     Q.audio.play('coin.mp3');
     this.destroy();

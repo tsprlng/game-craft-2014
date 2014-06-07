@@ -138,6 +138,16 @@
  <tileset firstgid="540" name="red" tilewidth="70" tileheight="70" spacing="2">
   <image source="../images/red.png" width="914" height="936"/>
  </tileset>
+ <tileset firstgid="696" name="coin" tilewidth="72" tileheight="97" spacing="2">
+  <image source="../images/coin.png" width="72" height="97"/>
+   <tile id="0">
+   <properties>
+    <property name="Class" value="Collectable"/>
+    <property name="amount" value="10"/>
+    <property name="sprite" value="coin_green"/>
+   </properties>
+  </tile>
+ </tileset>
  <imagelayer name="Background" width="200" height="30" visible="0">
   <image source="../images/bg.png"/>
  </imagelayer>
@@ -13970,7 +13980,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="535"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -14169,9 +14179,9 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="535"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="535"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -14368,11 +14378,11 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="535"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="535"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -19969,6 +19979,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="694"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -20168,6 +20179,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="694"/>
+   <tile gid="694"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -20367,11 +20380,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="694"/>
+   <tile gid="694"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -24174,5 +24184,7 @@
   <object gid="538" x="958" y="842"/>
   <object gid="537" x="64" y="697"/>
   <object gid="539" x="1606" y="587"/>
+  <object gid="696" x="140" y="551"/>
+  <object gid="696" x="697" y="572"/>
  </objectgroup>
 </map>

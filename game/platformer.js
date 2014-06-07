@@ -466,10 +466,11 @@ Q.scene('hud',function(stage) {
   container.fit(20);
 });
 
-Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
+Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
     Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
-    Q.compileSheets("paintcans.png","paintcans.json");
+    Q.compileSheets("paintcans.png", "paintcans.json");
+    Q.compileSheets("coin.png", "coin.json");
     Q.compileSheets("enemies.png","enemies.json");
     Q.compileSheets("doors.png","doors.json");
     Q.animations("player", {

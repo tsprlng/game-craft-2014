@@ -469,9 +469,6 @@ Q.scene('hud',function(stage) {
   container.p.x = container.p.w/2 + 6;
 });
 
-<<<<<<< HEAD
-Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
-=======
 Q.scene('introduction',function(stage) {
   var container = stage.insert(new Q.UI.Container({
     x: Q.width/2, y: Q.height/2, fill: "rgba(255,255,255,1)"
@@ -501,8 +498,7 @@ Q.scene('introduction',function(stage) {
   container.fit(20);
 });
 
-Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
->>>>>>> 7132f0447c63ef80c87cf16641d2b59bbf426466
+Q.loadTMX("composablez.tmx, collectables.json, paintcans.json, doors.json, enemies.json, slime_blue.json, slime_grey.json, slime_green.json, coin.json, fire.mp3, jump.mp3, heart.mp3, hit.mp3, coin.mp3, player.json, player_template.png", function() {
     Q.compileSheets("player_template.png","player.json");
     Q.compileSheets("collectables.png","collectables.json");
     Q.compileSheets("paintcans.png", "paintcans.json");

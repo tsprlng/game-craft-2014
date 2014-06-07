@@ -445,6 +445,7 @@ var makeLevel = function(filename, levelName){
     }
 
     stage.resetLevel = function(){
+      Q.audio.stop('lovely.mp3');      
       Q.clearStages();
       Q.stageScene(levelName);
     }

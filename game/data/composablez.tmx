@@ -148,6 +148,33 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="697" name="slime_Grey" tilewidth="60" tileheight="40">
+  <image source="../images/slime_Grey.png" width="180" height="40"/>
+   <tile id="0">
+     <properties>
+       <property name="Class" value="Slime_Grey"/>
+       <property name="sprite" value="slime_grey"/>
+     </properties>
+   </tile>
+ </tileset>
+ <tileset firstgid="700" name="slime_Green" tilewidth="60" tileheight="40">
+  <image source="../images/slime_Green.png" width="180" height="40"/>
+   <tile id="0">
+     <properties>
+       <property name="Class" value="Slime_Green"/>
+       <property name="sprite" value="slime_green"/>
+     </properties>
+   </tile>
+ </tileset>
+ <tileset firstgid="703" name="slime_blue" tilewidth="60" tileheight="40">
+  <image source="../images/slime_blue.png" width="180" height="40"/>
+   <tile id="0">
+     <properties>
+       <property name="Class" value="Slime_Blue"/>
+       <property name="sprite" value="slime_blue"/>
+     </properties>
+   </tile>
+ </tileset>
  <imagelayer name="Background" width="200" height="30" visible="0">
   <image source="../images/bg.png"/>
  </imagelayer>
@@ -24186,5 +24213,17 @@
   <object gid="539" x="1606" y="587"/>
   <object gid="696" x="140" y="551"/>
   <object gid="696" x="697" y="518"/>
+  <object gid="697" x="471" y="837"/>
+  <object gid="700" x="1439" y="837"/>
+  <object gid="700" x="1350" y="838"/>
+  <object gid="700" x="1061" y="839"/>
+  <object gid="700" x="1205" y="838"/>
+  <object gid="703" x="2685" y="837"/>
+  <object gid="703" x="2565" y="838"/>
+  <object gid="703" x="2430" y="837"/>
+  <object gid="703" x="2230" y="837"/>
+  <object gid="703" x="2093" y="836"/>
+  <object gid="703" x="1925" y="838"/>
+  <object gid="703" x="1795" y="836"/>
  </objectgroup>
 </map>

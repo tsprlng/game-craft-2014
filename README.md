@@ -1,0 +1,6 @@
+- install Node.js
+- `npm install -g grunt-cli`
+- cd to wherever this thing is
+- `npm install`
+- `grunt server`
+- Enjoy!!!

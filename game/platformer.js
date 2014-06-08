@@ -585,7 +585,7 @@ Q.loadTMX("composablez.tmx, level2.tmx, collectables.json, paintcans.json, doors
     Q.animations("grey_slime", EnemyAnimations);
     Q.animations("slime", EnemyAnimations);
     Q.animations("snail", EnemyAnimations);
-    Q.stageScene("introduction2");
+    Q.stageScene("introduction");
 }, {
   progressCallback: function(loaded,total) {
     var element = document.getElementById("loading_progress");
